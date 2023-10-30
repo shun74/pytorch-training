@@ -9,5 +9,7 @@ print(np.mean(a, axis=0))
 print(np.mean(a, axis=1))
 # sum, max, min
 print(np.sum(a))
+print(np.sum(a, axis=0))
+print(np.sum(a, axis=1))
 print(np.max(a))
 print(np.min(a))
