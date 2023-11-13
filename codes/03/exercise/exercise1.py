@@ -17,6 +17,7 @@ if __name__=="__main__":
     permuted_tensor = torch.permute(_tensor, (2, 0, 1))
     print("===== problem 2 =====")
     print(repr(permuted_tensor))
+    print(repr(permuted_tensor.size()))
 
     # problem 3
     sum_permuted_tensor = permuted_tensor.sum(dim=0)
