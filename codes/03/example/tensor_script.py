@@ -26,5 +26,5 @@ print(shared_tensor, "\n", private_tensor)
 
 # 形状確認 & 軸入れ替え
 # permute( 対象のテンソル , 対象テンソルの並び替え後の軸(0-index) )
-tensor = torch.zeros((2, 4, 8))
-print(tensor.size(), torch.permute(tensor, (2, 0, 1)).size())
+zero_tensor4 = torch.zeros((2, 4, 8))
+print(zero_tensor4.size(), torch.permute(zero_tensor4, (2, 0, 1)).size())

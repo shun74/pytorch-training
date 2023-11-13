@@ -9,12 +9,12 @@ if __name__=="__main__":
     ])
 
     # problem 1
-    tensor = torch.tensor(data, dtype=float)
+    _tensor = torch.tensor(data, dtype=float)
     print("===== problem 1 =====")
-    print(repr(tensor.size()))
+    print(repr(_tensor.size()))
     
     # problem 2
-    permuted_tensor = torch.permute(tensor, (2, 0, 1))
+    permuted_tensor = torch.permute(_tensor, (2, 0, 1))
     print("===== problem 2 =====")
     print(repr(permuted_tensor))
 

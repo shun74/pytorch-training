@@ -4,16 +4,16 @@ from torch.nn import Module
 
 class ExerciseModel(Module):
     
-    def __init__(self, tensor: torch.Tensor, elem_add: int, elem_multiply: int):
+    def __init__(self, mytensor: torch.Tensor, elem_add: int, elem_multiply: int):
         super().__init__()
-        self.tensor = tensor
+        self.mytensor = mytensor
         self.elem_add = elem_add
         self.elem_multiply = elem_multiply
 
     def forward(self, x: torch.Tensor):
-        assert x.size() == self.tensor.size(), "input size must match self.tensor size."
+        assert x.size() == self.mytensor.size(), "input size must match self.tensor size."
 
-        problem2_out = x + self.tensor
+        problem2_out = x + self.mytensor
         problem3_out = problem2_out + self.elem_add
         problem4_out = problem3_out * self.elem_multiply
 
