@@ -8,8 +8,8 @@ from torch.utils.data import Dataset
 class MyDataset(Dataset):
 
     def __init__(self, dataset_dir):
-        self.dataset_dir = Path(dataset_dir).resolve()
-        self.img_list = list(self.dataset_dir.glob("*"))
+        dir_path_resolved = Path(dataset_dir).resolve()
+        self.img_list = list(dir_path_resolved.glob("*.png"))
         self.transform = transforms.Compose([
             transforms.ToTensor(),
         ])
@@ -22,9 +22,10 @@ class MyDataset(Dataset):
         img = Image.open(img_path)
         img_tensor = self.transform(img)
 
+        # ファイル名からラベルの取得
         img_path = Path(img_path)
         parts = img_path.parts
-        label = parts[-1][:3]
+        label = int(parts[-1][:3])
 
         return img_tensor, label
     
