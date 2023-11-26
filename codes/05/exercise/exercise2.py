@@ -6,13 +6,13 @@ from torch.utils.data import Dataset
 class MyDataset(Dataset):
 
     def __init__(self, dataset_dir):
-        self.dataset_dir = Path(dataset_dir).resolve()
-        self.paths = list(self.dataset_dir.glob("*"))
+        dir_path_resolved = Path(dataset_dir).resolve()
+        dir_list = list(dir_path_resolved.glob("*"))
         self.img_list = []
 
-        for i in self.paths:
-            self.img_path_list = list(i.glob("*"))
-            self.img_list += self.img_path_list
+        for i in dir_list:
+            img_path_list = list(i.glob("*.png"))
+            self.img_list += img_path_list
         
         
     def __len__(self):

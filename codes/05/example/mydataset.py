@@ -6,8 +6,8 @@ from torch.utils.data import Dataset
 class MyDataset(Dataset):
 
     def __init__(self, dataset_dir):
-        self.dataset_dir = Path(dataset_dir).resolve()
-        self.img_list = list(self.dataset_dir.glob("*"))
+        dir_path_resolved = Path(dataset_dir).resolve()
+        self.img_list = list(dir_path_resolved.glob("*.png"))
 
     def __len__(self):
         return len(self.img_list)
