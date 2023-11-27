@@ -1,7 +1,5 @@
-import matplotlib.pyplot as plt
 from PIL import Image
 from pathlib import Path
-import torch 
 from torchvision import transforms
 from torch.utils.data import Dataset
 

@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from PIL import Image
 from pathlib import Path
 from torch.utils.data import Dataset
