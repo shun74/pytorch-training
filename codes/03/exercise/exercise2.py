@@ -24,7 +24,7 @@ if __name__=="__main__":
     mymodel = ExerciseModel(torch.ones((3, 3)), 4, 6)
     
     p2out, p3out, p4out = mymodel(torch.full((3, 3), 2))
-
+    
     print("===== problem 2 =====")
     print(repr(p2out))
     print("===== problem 3 =====")
