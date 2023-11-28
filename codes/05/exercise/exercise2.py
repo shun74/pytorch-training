@@ -11,8 +11,8 @@ class MyDataset(Dataset):
 
         for i in dir_list:
             img_path_list = list(i.glob("*.png"))
+            # ディレクトリ毎にファイルのリストの結合
             self.img_list += img_path_list
-        
         
     def __len__(self):
         return len(self.img_list)

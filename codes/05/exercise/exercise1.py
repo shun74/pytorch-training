@@ -6,7 +6,7 @@ if __name__ == "__main__":
     print("===== problem1 =====")
     print(data_directory_path)
 
-    dir_list = list(data_directory_path.glob("*"))
+    dir_list = sorted(list(data_directory_path.glob("*")))
     print("===== problem2 =====")
     for dir in dir_list:
         print(dir)
