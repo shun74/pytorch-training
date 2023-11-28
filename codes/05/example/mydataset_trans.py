@@ -19,7 +19,6 @@ class MyDataset(Dataset):
         img_path = self.img_list[idx]
         img = Image.open(img_path)
         img_tensor = self.transform(img)
-
         # ファイル名からラベルの取得
         img_path = Path(img_path)
         parts = img_path.parts

@@ -1,6 +1,7 @@
 from pathlib import Path
 
 if __name__ == "__main__":
+    
     data_directory = "./data"
     data_directory_path = Path(data_directory).resolve()
     print("===== problem1 =====")

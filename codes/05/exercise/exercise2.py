@@ -8,7 +8,6 @@ class MyDataset(Dataset):
         dir_path_resolved = Path(dataset_dir).resolve()
         dir_list = list(dir_path_resolved.glob("*"))
         self.img_list = []
-
         for i in dir_list:
             img_path_list = list(i.glob("*.png"))
             # ディレクトリ毎にファイルのリストの結合

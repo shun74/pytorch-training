@@ -17,6 +17,7 @@ def check_file_existence(file_path):
 
 
 if __name__ == "__main__":
+    
     # 絶対パスの取得
     data_directory = "./data"
     data_directory_path = Path(data_directory).resolve()
