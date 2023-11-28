@@ -1,9 +1,7 @@
 from pathlib import Path
 
 def get_files_in_directory(data_directory):
-    if not data_directory.exists() or not data_directory.is_dir():
-        print("Error: 'data' directory not found.")
-        return []
+    assert (data_directory.exists() and data_directory.is_dir()),  "'data' directory not found."
 
     file_list = list(data_directory.glob("*"))
 
@@ -42,8 +40,3 @@ if __name__ == "__main__":
     # ディレクトリを作成したいパス
     # directory_path = Path("./target_dir")
     # directory_path.mkdir(parents=True, exist_ok=True)
-
-
-
-
-
