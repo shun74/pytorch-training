@@ -85,7 +85,7 @@ if __name__ == "__main__":
     val_dataloader = torch.utils.data.DataLoader(
         val_dataset, batch_size=batch_size, shuffle=False)
     
-    print("===== problem1.3 =====")
+    print("===== problem3 =====")
     for batch in train_dataloader:
         # batchはデータとラベルのタプル (data, labels)
         data, labels = batch

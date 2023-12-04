@@ -56,4 +56,3 @@ if __name__ == "__main__":
     std = (0.5,0.5,0.5)
     train_dataset = MyDataset(train_dataset, transform=ImageTransform(size,mean,std), phase='train')
     val_dataset = MyDataset(val_dataset, transform=ImageTransform(size,mean,std), phase='val')
-
