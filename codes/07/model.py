@@ -24,6 +24,7 @@ class CNN(nn.Module):
 
 if __name__=="__main__":
     model = CNN()
+    
     """
     # モデルの情報を表示
     torchsummary.summary(model, (3, 32, 32))

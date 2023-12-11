@@ -64,3 +64,4 @@ if __name__=="__main__":
         train_acc_list.append(avg_train_acc)
         val_loss_list.append(avg_val_loss)
         val_acc_list.append(avg_val_acc)
+        

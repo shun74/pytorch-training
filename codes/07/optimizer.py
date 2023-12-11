@@ -43,3 +43,4 @@ if __name__=="__main__":
 
         if (epoch + 1) % 10 == 0:
             print(f'Epoch: {epoch + 1: <3}, Loss: {loss.item():.4f}')
+            
