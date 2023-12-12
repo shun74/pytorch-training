@@ -1,11 +1,11 @@
 import torch
 from torch.utils.data import DataLoader
 
-from dataset import datasets
+from dataset import cifar_datasets
 from model import CNN
 
 # データローダーからデータを受け取る (参考：dataloader.py)
-train_data, test_data = datasets()
+train_data, test_data = cifar_datasets()
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
