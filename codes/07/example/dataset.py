@@ -1,14 +1,13 @@
-import torchvision
-import torchvision.transforms as transforms
+from torchvision import transforms, datasets
 
-def datasets():
+def cifar_datasets():
     # データセットの読み込み
-    train_data = torchvision.datasets.CIFAR10(root="../", 
+    train_data = datasets.CIFAR10(root="../", 
                                             train=True,
                                             transform=transforms.ToTensor(), 
                                             download=True)
 
-    test_data = torchvision.datasets.CIFAR10(root="../", 
+    test_data = datasets.CIFAR10(root="../", 
                                             train=False, 
                                             transform=transforms.ToTensor(), 
                                             download=True)
@@ -16,7 +15,7 @@ def datasets():
     return train_data, test_data
 
 if __name__=="__main__":
-    train_data, test_data = datasets()
+    train_data, test_data = cifar_datasets()
 
     # 訓練データの1枚目を取得
     image, label = train_data[0]
