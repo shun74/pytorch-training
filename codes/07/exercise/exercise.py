@@ -5,12 +5,12 @@ from torch.utils.data import DataLoader
 import torch.optim as optim
 
 # dataset.py内のdatasets関数をインポート
-from dataset import cifar_datasets
+from dataset import cifar_dataset
 # model.py内のCNNクラスをインポート
 from model import CNN
 
 # データローダーからデータを受け取る
-train_data, test_data = cifar_datasets()
+train_data, test_data = cifar_dataset()
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 test_loader = DataLoader(test_data, batch_size=64, shuffle=False)
 
