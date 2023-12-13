@@ -22,11 +22,6 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 if __name__=="__main__":
     epochs = 20
 
-    train_loss_list = []
-    train_acc_list = []
-    val_loss_list = []
-    val_acc_list = []
-
     for epoch in range(epochs):
         train_loss = 0
         train_acc = 0
@@ -60,7 +55,3 @@ if __name__=="__main__":
         
         print ('Epoch {}, Loss: {loss:.4f}, val_loss: {val_loss:.4f}, val_acc: {val_acc:.4f}' 
             .format(epoch+1, i+1, loss=avg_train_loss, val_loss=avg_val_loss, val_acc=avg_val_acc))
-        train_loss_list.append(avg_train_loss)
-        train_acc_list.append(avg_train_acc)
-        val_loss_list.append(avg_val_loss)
-        val_acc_list.append(avg_val_acc)
