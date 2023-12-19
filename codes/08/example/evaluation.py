@@ -1,6 +1,5 @@
 # モジュールのインポート
 import torch
-import torch.nn as nn
 from torch.utils.data import DataLoader
 
 # dataset.py内のdatasets関数をインポート
@@ -23,16 +22,12 @@ checkpoint = torch.load(model_path)
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
-# 損失関数の定義
-criterion = nn.CrossEntropyLoss()
-
 if __name__=="__main__":
     val_acc = 0
 
     with torch.no_grad():
         for images, labels in test_loader:
             outputs = model(images)
-            loss = criterion(outputs, labels)
             val_acc += (outputs.max(1)[1] == labels).sum().item()
     avg_val_acc = val_acc / len(test_loader.dataset)
     
