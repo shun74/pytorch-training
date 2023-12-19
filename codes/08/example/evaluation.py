@@ -27,16 +27,13 @@ model.eval()
 criterion = nn.CrossEntropyLoss()
 
 if __name__=="__main__":
-    val_loss = 0
     val_acc = 0
 
     with torch.no_grad():
         for images, labels in test_loader:
             outputs = model(images)
             loss = criterion(outputs, labels)
-            val_loss += loss.item()
             val_acc += (outputs.max(1)[1] == labels).sum().item()
-    avg_val_loss = val_loss / len(test_loader)
     avg_val_acc = val_acc / len(test_loader.dataset)
     
-    print('val_loss: {:.4f}, val_acc: {:.4f}'.format(avg_val_loss, avg_val_acc))
+    print('Accuracy: {:.4f}'.format(avg_val_acc))
